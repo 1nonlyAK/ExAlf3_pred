@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AlF3 Excess Prediction</title>
+</head>
+<body>
+    <h2>Predict Excess AlF3</h2>
+    <form action="/predict" method="post">
+        SetV: <input type="text" name="SetV"><br>
+        AlWeight: <input type="text" name="AlWeight"><br>
+        BathTemp: <input type="text" name="BathTemp"><br>
+        Na: <input type="text" name="Na"><br>
+        CaF2: <input type="text" name="CaF2"><br>
+        POTAGE: <input type="text" name="POTAGE"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction is defined %}
+    <h3>Predicted Excess AlF3: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
